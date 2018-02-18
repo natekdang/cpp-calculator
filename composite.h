@@ -84,6 +84,15 @@ class Mult: public Operator {
         };
 };
 
+class Divide: public Operator {
+    public:
+        Divide() : Operator() { };
+        Divide(Base* left, Base* right) : Operator(left,right) { };
+        double evaluate() {
+            return this->left->evaluate() / this->right->evaluate(); 
+        };
+};
+
 class Sqr: public UnaryOperator {
     public:
         Sqr() : UnaryOperator() { };

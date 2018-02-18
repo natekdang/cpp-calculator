@@ -53,6 +53,15 @@ class MultCommand : public Command {
 		};
 };
 
+class DivideCommand : public Command {
+	//MultCommand Code Here
+	public: 
+		DivideCommand() : Command() {};
+		DivideCommand(Command *command, int val) {
+	        root = new Divide(command->get_root(), new Op(val) );
+		};
+};
+
 class SqrCommand : public Command {
 	//SqrCommand Code Here
 	public: 
@@ -70,5 +79,7 @@ class ModuloCommand : public Command {
 			root = new Modulo(command->get_root(), new Op(val) ); //mod function 
 		}
 };
+
+
 
 #endif //__COMMAND_CLASS__
