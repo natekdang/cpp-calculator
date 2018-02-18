@@ -93,4 +93,13 @@ class Sqr: public UnaryOperator {
         };
 };
 
+class Modulo: public Operator { //mod function
+    public:
+        Modulo() : Operator() { };
+        Modulo(Base* left, Base* right) : Operator(left,right) { };
+        double evaluate() {
+            return fmod(this->left->evaluate(), this->right->evaluate()); 
+        };
+};
+
 #endif

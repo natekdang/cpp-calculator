@@ -46,7 +46,7 @@ int main() {
 		}
 		else if(isInteger(input)) {
 			if(!menu->initialized()) {
-				menu->add_command(new OpCommand(atoi(input.c_str())));
+				menu->add_command(new OpCommand(atoi(input.c_str()))); //atoi converts string argument to integer  
 				cout << "Result: ";
 				menu->execute();
 			}
@@ -83,6 +83,15 @@ int main() {
 				menu->add_command(new SqrCommand(menu->get_command()));
 				cout << "Result: ";
 				menu->execute();
+			}
+		}
+		else if(input.substr(0,1) == "%") { //added moduloclass 
+			if(menu->initialized()) {
+				if(isInteger(input.substr(2))) {
+					menu->add_command(new ModuloCommand(menu->get_command(), atoi((input.substr(2)).c_str())));
+					cout << "Result: ";
+					menu->execute();
+				}
 			}
 		}
 		else {

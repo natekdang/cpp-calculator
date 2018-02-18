@@ -62,4 +62,13 @@ class SqrCommand : public Command {
 		};
 };
 
+class ModuloCommand : public Command {
+	//ModuloCommand Code Here, no cpp
+	public: 
+		ModuloCommand() : Command() {};
+		ModuloCommand(Command *command, int val) {
+			root = new Modulo(command->get_root(), new Op(val) ); //mod function 
+		}
+};
+
 #endif //__COMMAND_CLASS__
