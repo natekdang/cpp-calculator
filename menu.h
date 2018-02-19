@@ -17,6 +17,12 @@ class Menu {
 			//Base constructor to set up all necessary members
 			history_index = -1;
 		};
+	/*	~Menu() {
+			while (history.size() > 0)
+			{
+				delete history.front()->root;
+			}
+		}*/
 		void execute() {
 			//Prints the current commands value (based on history_index), if no commands exist
 			//print 0 by default
@@ -28,7 +34,7 @@ class Menu {
 			}
 		};
 		bool initialized() {
-			//Return true if the history has been primed with a single op instruciton
+			//Return true if the history has been primed with a single op instruction
 			//This is necessary because that is the base of a calculation
 			if(history.empty() ) {
 			    return false;

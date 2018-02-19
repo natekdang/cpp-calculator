@@ -30,6 +30,8 @@ int main() {
 		getline(cin, input);		
 
 		if(input == "exit") {
+			delete menu;  //gives 2 more frees 
+			
 			break;
 		}
 		else if(input == "redo") {
