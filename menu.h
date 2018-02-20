@@ -17,12 +17,14 @@ class Menu {
 			//Base constructor to set up all necessary members
 			history_index = -1;
 		};
-	/*	~Menu() {
+		/*~Menu() {
 			while (history.size() > 0)
 			{
-				delete history.front()->root;
+				delete history.front();
 			}
+			
 		}*/
+		
 		void execute() {
 			//Prints the current commands value (based on history_index), if no commands exist
 			//print 0 by default

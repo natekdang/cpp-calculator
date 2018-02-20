@@ -15,6 +15,7 @@ using namespace std;
 class Base {
     public:
         Base(){};
+        virtual ~Base(){};  //virtual destructor 
 
         //virtual
         virtual double evaluate() = 0;
