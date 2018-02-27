@@ -17,13 +17,16 @@ class Menu {
 			//Base constructor to set up all necessary members
 			history_index = -1;
 		};
-		/*~Menu() {
+		~Menu() {
+			//cout << history.size() << "\n"; 
 			while (history.size() > 0)
 			{
-				delete history.front();
+				delete (history.end() - 1); //this causes issues 
+				//history.pop_back(); 
+				cout << history.size() << "\n";  
 			}
 			
-		}*/
+		}
 		
 		void execute() {
 			//Prints the current commands value (based on history_index), if no commands exist
